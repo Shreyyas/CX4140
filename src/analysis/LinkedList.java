@@ -1,8 +1,6 @@
 package analysis;
 
 public class LinkedList {
-	private static int numNodes = 200400;
-	//private static int exponent = 4;
 	private static Node head;
 	private int listSize;
 	
@@ -43,7 +41,7 @@ public class LinkedList {
 		return currentNode;
 	}
 	
-	public Node traverse(int index)
+	public Node traverse(long index)
 	{
 		Node currentNode = head;
 		for(int i = 1; (i < index && currentNode.getNextNode() != null); i++) {
@@ -64,8 +62,8 @@ public class LinkedList {
 			System.out.println("List is Empty!");
 		}
 	}
-		
-	private boolean isEmpty() {
+
+	public boolean isEmpty() {
 		return listSize == 0;
 	}
 	
@@ -78,6 +76,7 @@ public class LinkedList {
 		LinkedList list = new LinkedList();
 		System.out.println("Size of list: " + list.size());
 		LinkedList.printList(list);
+		int numNodes = 2000;
 		
 		for(int i = 1; i <= numNodes; i++) {
 			list.add(i);
