@@ -76,7 +76,7 @@ public class LinkedList {
 		LinkedList list = new LinkedList();
 		System.out.println("Size of list: " + list.size());
 		LinkedList.printList(list);
-		int numNodes = 2000;
+		int numNodes = 20;
 		
 		for(int i = 1; i <= numNodes; i++) {
 			list.add(i);
