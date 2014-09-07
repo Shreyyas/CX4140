@@ -1,4 +1,4 @@
-package analysis;
+package Problem_1;
 /**
  * Node class for Linked List
  * @author ShreyyasV

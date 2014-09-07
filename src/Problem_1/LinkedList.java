@@ -1,4 +1,4 @@
-package analysis;
+package Problem_1;
 
 public class LinkedList {
 	private static Node head;
@@ -76,7 +76,7 @@ public class LinkedList {
 		LinkedList list = new LinkedList();
 		System.out.println("Size of list: " + list.size());
 		LinkedList.printList(list);
-		int numNodes = 20;
+		int numNodes = 2000;
 		
 		for(int i = 1; i <= numNodes; i++) {
 			list.add(i);
