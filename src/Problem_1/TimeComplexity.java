@@ -85,7 +85,7 @@ public class TimeComplexity
 		estimatedRunTime = endTime - startTime;
 		normalizingRunningTime = estimatedRunTime / numberOfElements;
 
-		runningTimeList.add((double) normalizingRunningTime);
+		runningTimeList.add(normalizingRunningTime);
 		return runningTimeList;
 	}
 

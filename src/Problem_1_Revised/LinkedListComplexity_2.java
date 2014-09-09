@@ -1,12 +1,14 @@
 package Problem_1_Revised;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.ListIterator;
-import java.util.ArrayList;
 
 public class LinkedListComplexity_2 {
 
 	//Create one list. Find the points you want to go between. For now just go from 2^5 to 2^24 as a base.
-
+	public final static int START = 5;
+	public final static int END   = 12;
+	
 	private LinkedList<Long> list;
 	private ArrayList<Double> timesList;
 	public LinkedListComplexity_2()
@@ -14,13 +16,12 @@ public class LinkedListComplexity_2 {
 		timesList = new ArrayList<Double>();
 	}
 	
-	public void calculateListComplexity(int indexStart, int indexEnd) {
+	public ArrayList<Double> calculateListComplexity(int indexStart, int indexEnd) {
 		
 		/*for(int j = 0; j < list.size(); j++) {
 			System.out.println("Original List at: " +(j+1) +" Value: " +list.get(j));
 		}*/
 		long k = 1;
-		long value = 0;
 		long endPoint = 0;
 		double startTime = 0;
 		double endTime = 0;
@@ -61,11 +62,42 @@ public class LinkedListComplexity_2 {
 		for(int m = 0; m < timesList.size(); m++) {
 			System.out.println("Normalized List at: " +(indexStart+m) +" Value: " +normalizedList.get(m));
 		}
+		
+		return normalizedList;
+	}
+	
+	public static ArrayList<Integer> getInputs(int start, int end) {
+		ArrayList<Integer> inputs = new ArrayList<Integer>();
+		for(int i = start; i <= end; i++) {
+			inputs.add(i);
+		}
+		return inputs;
+	}
+	
+	public static double[] convertToDoubleArray(ArrayList<Double> list) {
+		double[] array= new double[list.size()];
+		for (int i = 0; i < list.size(); i++) {
+			array[i] = (double) list.get(i);
+		}
+	    return array;
+	}
+	
+	public static double[] convertToIntegerArray(ArrayList<Integer> list) {
+		double[] array= new double[list.size()];
+		for (int i = 0; i < list.size(); i++) {
+			array[i] = (double) list.get(i);
+		}
+	    return array;
 	}
 	
 	public static void main(String[] args) {
 		LinkedListComplexity listComplexity = new LinkedListComplexity();
-		listComplexity.calculateListComplexity(5, 24);
+		listComplexity.calculateListComplexity(START, END);
+		ArrayList<Integer> inputs = getInputs(START, END);
+		
+		for(int m = 0; m < inputs.size(); m++) {
+			System.out.println("Inputs List at: " +(START+m) +" Value: " +inputs.get(m));
+		}
 	}
 		
 }

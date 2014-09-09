@@ -1,7 +1,7 @@
 package Problem_1_Revised;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.ListIterator;
-import java.util.ArrayList;
 //Create one list. Find the points you want to go between. For now just go from 2^5 to 2^24 as a base.
 public class LinkedListComplexity 
 {
@@ -59,13 +59,12 @@ public class LinkedListComplexity
 		LinkedList<Long> secondTestList = new LinkedList<Long>();
 		secondTestList.add(longTestCase);
 		ListIterator<Long> secondTestIterator = secondTestList.listIterator();
-		long equalsLongTestCase = 0;
 		//System.out.println("Time to Get Value: ");
 
 		//Time to get Value
 		double startTimeToGetValue = System.nanoTime();
 		while(secondTestIterator.hasNext()) {
-			equalsLongTestCase = secondTestIterator.next();
+			secondTestIterator.next();
 		}
 		double endTimeToGetValue = System.nanoTime();
 		double getValueDifference = endTimeToGetValue-startTimeToGetValue;
