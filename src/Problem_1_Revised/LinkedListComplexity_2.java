@@ -41,7 +41,7 @@ public class LinkedListComplexity_2 {
 			System.out.println("Power: " +j);
 			startTime = System.nanoTime();
 			while(listIterator.hasNext()) {
-				System.out.println("Currently traversing: " +listIterator.next());
+				listIterator.next();//System.out.println("Traversing: " +listIterator.next());
 			}
 			endTime = System.nanoTime();
 			timesList.add(endTime-startTime);
