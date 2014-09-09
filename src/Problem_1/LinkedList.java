@@ -76,7 +76,7 @@ public class LinkedList {
 		LinkedList list = new LinkedList();
 		System.out.println("Size of list: " + list.size());
 		LinkedList.printList(list);
-		int numNodes = 2000;
+		int numNodes = 90000;
 		
 		for(int i = 1; i <= numNodes; i++) {
 			list.add(i);
@@ -95,9 +95,9 @@ public class LinkedList {
 		//Need to plot the data for normalizingRunningTime for numLinks varying from 25, 32, 64, 128, 224
 		
 		System.out.println("I've traversed to the node with value of: " +finalNode.getData());
-		System.out.println("Start Time: " +startTime/1000); 
-		System.out.println("End Time: " +endTime/1000);
-		System.out.println("Estimated Run Time: " +estimatedRunTime/1000);
+		//System.out.println("Start Time: " +startTime/1000); 
+		//System.out.println("End Time: " +endTime/1000);
+		//System.out.println("Estimated Run Time: " +estimatedRunTime/1000);
 		System.out.println("Normalizing Run Time: " +normalizingRunningTime);
 	}
 }
