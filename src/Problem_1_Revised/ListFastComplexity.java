@@ -3,11 +3,11 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.ListIterator;
 //Create one list. Find the points you want to go between. For now just go from 2^5 to 2^24 as a base.
-public class LinkedListComplexity 
+public class ListFastComplexity 
 {
 	private LinkedList<Long> list;
 	private ArrayList<Double> timesList;
-	public LinkedListComplexity()
+	public ListFastComplexity()
 	{
 		list = new LinkedList<Long>();
 		timesList = new ArrayList<Double>();
@@ -23,8 +23,8 @@ public class LinkedListComplexity
 		}
 		/*for(int j = 0; j < list.size(); j++) {
 			System.out.println("Original List at: " +(j+1) +" Value: " +list.get(j));
-		}*/
-		
+		}
+*/		
 		ListIterator<Long> listIterator = list.listIterator();
 		double start = System.nanoTime();
 		double end = 0;
@@ -33,7 +33,7 @@ public class LinkedListComplexity
 			value = listIterator.next();
 			if((value & (value - 1)) == 0) {
 				end = System.nanoTime(); //marks values as one passes through the list
-				System.out.println("Value: " +value);
+				//System.out.println("Value: " +value);
 				timesList.add(end);
 			}
 		}
@@ -112,7 +112,7 @@ public class LinkedListComplexity
 		for(int x = 0; x < adjustedList.size(); x++) {
 			nodeSize = Math.pow(2, initialIndex);
 			normalizedTime = adjustedList.get(x)/(nodeSize);
-			System.out.println("Node Size: " +nodeSize);
+			//System.out.println("Node Size: " +nodeSize);
 			initialIndex++;
 			normalizedTime = normalizedTime/1000000000.0;
 			normalizedList.add(normalizedTime);
@@ -123,7 +123,7 @@ public class LinkedListComplexity
 	}
 	
 	public static void main(String[] args) {
-		LinkedListComplexity listComplexity = new LinkedListComplexity();
+		ListFastComplexity listComplexity = new ListFastComplexity();
 		listComplexity.calculateListComplexity(5, 24);
 	}
 	
