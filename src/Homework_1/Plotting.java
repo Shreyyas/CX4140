@@ -1,10 +1,6 @@
 package Homework_1;
 
 import java.awt.Color;
-import java.awt.Font;
-import java.util.ArrayList;
-
-import Problem_1.ArrayTimeComplexity;
 
 import com.xeiam.xchart.BitmapEncoder;
 import com.xeiam.xchart.Chart;
