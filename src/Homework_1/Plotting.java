@@ -1,4 +1,4 @@
-package Problem_1_Revised;
+package Homework_1;
 
 import java.awt.Color;
 import java.awt.Font;
