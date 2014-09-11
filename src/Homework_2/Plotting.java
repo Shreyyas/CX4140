@@ -1,4 +1,4 @@
-package Homework_1;
+package Homework_2;
 
 import java.awt.Color;
 
@@ -7,7 +7,11 @@ import com.xeiam.xchart.Chart;
 import com.xeiam.xchart.Series;
 import com.xeiam.xchart.SeriesMarker;
  
-
+/**
+ * Plots the traversal data using XChart Java graphing library.
+ * @author ShreyyasV
+ *
+ */
 public class Plotting 
 {
 	public static final int START = 5;
@@ -20,13 +24,13 @@ public class Plotting
 		
 	    System.out.println("STATE: [Starting Traversal Through List]");
 	    double[] xData = listData.getInputs();
-	    double[] yListData = listData.calculateListTraversalTime();
+	    double[] yListData = listData.calculateListTraversal();
 	    System.out.println("STATE: [List Traversal Is Now Complete!]");
 
 	    System.out.println("STATE: [Starting Traversal Through Arrays]");
-	    double[] ySequentialData = analysis.sequential();
-	    double[] yStrideData = analysis.stride();
-	    double[] yRandomData = analysis.random();
+	    double[] ySequentialData = analysis.calculateSequentialTraversal();
+	    double[] yStrideData = analysis.calculateStrideTraversal();
+	    double[] yRandomData = analysis.calculateRandomTraversal();
 	    System.out.println("STATE: [Array Traversal Is Now Complete!]");
 
 	    System.out.println("STATE: [Creating Charts]");
@@ -43,7 +47,7 @@ public class Plotting
 	    sequentialArraySeries.setMarker(SeriesMarker.DIAMOND);
 	    sequentialArraySeries.setLineColor(Color.BLACK);
 	    
-	    Series strideArraySeries = chart.addSeries("Stride Array", xData, yStrideData);
+	    Series strideArraySeries = chart.addSeries(ORDER+"-Stride Array", xData, yStrideData);
 	    strideArraySeries.setMarker(SeriesMarker.SQUARE);
 	    strideArraySeries.setLineColor(Color.GREEN);
 	    
